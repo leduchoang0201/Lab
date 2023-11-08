@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.top{
+    width: 100%;
+    height: 100px;
+    background-color: #179FDB;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.lefttop{
+    
+    margin: 15px;
+    margin-left: 100px;
+}
+.lefttop a{
+    color: white;
+    font-size: 50px;
+    font-family: Verdana;
+    text-decoration: none;
+    font-weight: 1000;
+}
+.righttop ul{
+    list-style: none;
+    display: flex;
+}
+.righttop li{
+    margin-top: 30px;
+    padding-right: 50px;
+}
+.righttop a{
+    color: white;
+    font-size: 30px;
+    font-family: Verdana;
+    padding: 20px;
+    text-decoration: none;
+}
+.righttop a:hover{
+    color: black;
+    text-decoration: underline;
+}
+.body{
+    margin-top: 50px;
+    display: flex;
+}
+.add{
+    margin-left: 50px;
+    width: 500px;
+    height: 350px;
+    border: 1px solid black;
+    padding: 30px;
+    
+}
+.add h1{
+    padding: 10px 0px 30px 0px;
+    text-align: center;
+}
+.add label{
+    width: 150px;
+    float: left;
+}
+.add input{
+    margin-bottom: 10px;
+}
+.add select{
+    margin-bottom: 10px;
+}
+.list{
+    margin-left: 100px;
+}
+.button{
+    margin-top: 10px;
+    justify-content: center;
+    background-color: rgb(175, 9, 12);
+    color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(247, 110, 133);
+    color: black;
+}
+.bot{
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: grey;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: Calibri;
+    position: fixed;
+}
