@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" href="main1.css">
+    <script src="main.js"></script>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+    <title>Implement</title>
+</head>
+<body>
+    <div class="top">
+        <div class="lefttop">
+            <a href="requirement.html">Lab4</a>
+        </div>
+        <div class="righttop">
+            <ul>
+                <li>
+                    <a href="requirement.html">
+                        <i class="fa-solid fa-list"></i>
+                        Requirement
+                    </a>
+                </li>
+                <li>
+                    
+                    <a href="">
+                        <i class="fa-solid fa-pencil"></i>
+                        Design
+                    </a>
+                </li>
+                <li>
+                    <a href="implement.html">
+                        <i class="fa-regular fa-bookmark"></i>
+                        Implement
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="body">
+        <div class="add">
+            <h1>Quản lý môn học</h1>
+            
+                <label for="name">Tên môn học: </label>   
+                <input type="text" name="" id="name" placeholder="Nhập tên môn học"><br>
+                <label for="ID">Mã môn học:  </label> 
+                <input type="text" name="" id="ID" placeholder="Nhập mã môn học"> <br>
+                <label for="class">Phòng:  </label>
+                <input type="text" name="" id="class" placeholder="Nhập phòng"> <br>
+                <label for="building">Khu: </label>
+                <select name="" id="building">
+                    <option value="">--Chọn khu học--</option>
+                    <option value="Rạng Đông">Rạng Đông</option>
+                    <option value="Phượng Vĩ">Phượng Vĩ</option>
+                    <option value="Hướng Dương">Hướng Dương</option>
+                    <option value="Tường Vi">Tường Vi</option>
+                    <option value="Cát Tường">Cát Tường</option>
+                </select> <br>
+                <label for="lesson">Ca: </label>
+                <select name="" id="lesson">
+                    <option value="">--Chọn ca học--</option>
+                    <option value="Ca 1">Ca 1</option>
+                    <option value="Ca 2">Ca 2</option>
+                    <option value="Ca 3">Ca 3</option>
+                    <option value="Ca 4">Ca 4</option>
+                    <option value="Ca 5">Ca 5</option>
+                </select> <br>
+                <label for="nameGV">Tên Giáo Viên:  </label>
+                <input type="text" name="" id="nameGV" placeholder="Nhập tên Giáo Viên"> <br>
+                <div style="text-align: center;"><button class="button"type="button"  onclick="addSubject()">Thêm môn học</button></div>
+                
+            
+        </div>
+        <div class="list" id="list">
+            <h2>Danh sách môn học</h2>
+            <table id="list-subject" width =600px border="2">
+
+            </table>
+        </div>
+    </div>
+</body>
+    <footer class="bot">
+        <p>
+            <i class="fa-regular fa-copyright"></i>
+            Copyright 2023 by Le Duc Hoang. All Rights Reserved
+            <br>
+            22130086@st.hcumaf.edu.vn
+
+        </p>
+    </footer>
+</html>
