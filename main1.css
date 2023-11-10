@@ -11,6 +11,9 @@
     justify-content: space-between;
     
 }
+.body{
+    min-height: 70vh   ;
+}
 .lefttop{
     
     margin: 15px;
@@ -71,6 +74,10 @@
 .list{
     margin-left: 100px;
 }
+.nut{
+    display: flex;
+    justify-content: right;
+}
 .button{
     margin-top: 10px;
     justify-content: center;
@@ -97,5 +104,5 @@
     color: white;
     font-size: 20px;
     font-family: Calibri;
-    position: fixed;
+    
 }
