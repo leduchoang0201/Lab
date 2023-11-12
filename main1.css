@@ -94,6 +94,16 @@
     background-color: rgb(247, 110, 133);
     color: black;
 }
+.found {
+    background-color: #89CFF0; 
+}
+.list h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.list input{
+    margin-bottom: 3px;
+}
 .bot{
     bottom: 0;
     width: 100%;

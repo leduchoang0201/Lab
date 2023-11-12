@@ -116,7 +116,9 @@ function editSubject(STT){
         document.getElementById('lesson').value = subject[STT].lesson;
         document.getElementById('nameGV').value = subject[STT].nameGV;
     }
-    
+    updateIdNotification('Không được sửa mã môn học.');
+    document.getElementById('add-button').style.visibility = 'hidden';
+    document.getElementById('confirm-button').style.visibility = 'visible';
 }
 function button(STT){
     let monhoc = document.getElementById('name').value;
@@ -125,25 +127,52 @@ function button(STT){
     let khu = document.getElementById('building').value;
     let ca = document.getElementById('lesson').value;
     let tenGV = document.getElementById('nameGV').value;
+
     if (monhoc && mamonhoc && phonghoc && khu && ca && tenGV) {
-        let subject = localStorage.getItem('subject') ? JSON.parse(localStorage.getItem('subject')) : [];
-        
-        subject.push({
-            name: monhoc,
-            ID: mamonhoc,
-            class: phonghoc,
-            building: khu,
-            lesson: ca,
-            nameGV: tenGV
-        });
-        localStorage.setItem('subject', JSON.stringify(subject));
-        this.saveSubject();
-        updateSubjectTable();
+        let subjectList = localStorage.getItem('subject') ? JSON.parse(localStorage.getItem('subject')) : [];
+        let changeSubject = subjectList.find(subject => subject.ID === mamonhoc);
+        if (changeSubject) {
+            changeSubject.name = document.getElementById('name').value;
+            changeSubject.class = document.getElementById('class').value;
+            changeSubject.building = document.getElementById('building').value;
+            changeSubject.lesson = document.getElementById('lesson').value;
+            changeSubject.nameGV = document.getElementById('nameGV').value;
+            document.getElementById('confirm-button').style.visibility = 'hidden';
+            document.getElementById('add-button').style.visibility = 'visible';
+            localStorage.setItem('subject', JSON.stringify(subjectList));
+            updateSubjectTable();
+            updateIdNotification('');
+        }
+        document.getElementById("name").value = "";
+        document.getElementById("ID").value = "";
+        document.getElementById("class").value = "";
+        document.getElementById("building").value = "";
+        document.getElementById("lesson").value = "";
+        document.getElementById("nameGV").value = "";
     }
-    let subject = localStorage.getItem('subject') ? JSON.parse(localStorage.getItem('subject')) : [];
 }
+function updateIdNotification(message) {
+    let idNotification = document.getElementById('id-notification');
+    idNotification.innerText = message;
+    idNotification.style.display = message ? 'block' : 'none';
+}
+function searchSubject() {
+    let searchID = document.getElementById('searchID').value.toLowerCase();
+    let subjectList = localStorage.getItem('subject') ? JSON.parse(localStorage.getItem('subject')) : [];
+    let allRows = document.querySelectorAll('#list-subject tr');
+    allRows.forEach(row => row.classList.remove('found'));
+    let foundRow = null;
+    subjectList.forEach((subject, index) => {
+        if (subject.ID === searchID) {
+            foundRow = index + 2; 
+        }
+    });
 
-
+    if (foundRow !== null) {
+        let row = document.querySelector(`#list-subject tr:nth-child(${foundRow})`);
+        row.classList.add('found');
+    }
+}
 function initPage() {
     updateSubjectTable();
     saveSubject();

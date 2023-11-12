@@ -44,6 +44,7 @@
             
                 <label for="name">Tên môn học: </label>   
                 <input type="text" name="" id="name" placeholder="Nhập tên môn học"><br>
+                <div style="color: red;"id="id-notification"></div>
                 <label for="ID">Mã môn học:  </label> 
                 <input type="text" name="" id="ID" placeholder="Nhập mã môn học"> <br>
                 <label for="class">Phòng:  </label>
@@ -69,8 +70,12 @@
                 <label for="nameGV">Tên Giáo Viên:  </label>
                 <input type="text" name="" id="nameGV" placeholder="Nhập tên Giáo Viên"> <br>
                 <div class="nut" >
-                    <div style=""><button class="button"type="button"  onclick="addSubject()">Thêm môn học</button></div>
-                    <div style="margin-left: 20px;"><button style="background-color: aqua;visibility: hidden;"id="confirm-button"class="button"type="button" onclick="button()">Xác nhận</button></div>
+                    <div style="">
+                        <button class="button"type="button" id="add-button" onclick="addSubject()">Thêm môn học</button>
+                    </div>
+                    <div style="margin-left: 20px;">
+                        <button style="background-color: aqua;color:black;visibility:hidden;"id="confirm-button"class="button"type="button" onclick="button()">Xác nhận</button>
+                    </div>
                 </div>
                 
                 
@@ -79,6 +84,9 @@
         </div>
         <div class="list" id="list">
             <h2>Danh sách môn học</h2>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <label for="searchID">Tìm kiếm theo mã môn học: </label>
+            <input type="text" id="searchID" placeholder="Nhập mã môn học" oninput="searchSubject()">
             <table id="list-subject" width =600px border="2">
 
             </table>
