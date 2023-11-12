@@ -42,23 +42,45 @@
     color: black;
     text-decoration: underline;
 }
-
+.title{
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(255, 89, 0);
+}
 .body{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 100vh;
 }
-.img{
-    max-width: 50%;
-    max-height: 100%;
+.img1 {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    padding-top: 70px;
+    padding-left: 100px;
 }
+.img2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 70px;
+    padding-right: 100px;
+}
+.img1 img, 
+.img2 img{
+    margin-bottom: 30px;
+}
+.img2 button{
+    margin-bottom: 30px;
+}
+
 .download-button{
     width: 150px;
     height: 30px;
     border-radius: 30px;
     background-color: red;
     color: white;
+    display: inline-block;
     
 }
 .download-button:hover{
@@ -67,6 +89,20 @@
     border-radius: 30px;
     background-color: rgb(254, 152, 152);
     color: black;
+}
+.figma-button{
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: lightblue;
+    color: white;
+}
+.figma-button:hover{
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: lightyellow;
+    color: white;
 }
 .bot{
     bottom: 0;
