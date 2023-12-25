@@ -21,7 +21,8 @@
     font-size: 50px;
     font-family: Verdana;
     text-decoration: none;
-    font-weight: 1000;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 .righttop ul{
     list-style: none;
